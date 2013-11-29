@@ -1,0 +1,29 @@
+{
+	"name": "dev-ws",
+	"version": "0.1.0",
+	"description": "Development Web Server",
+	"main": "server.js",
+	"readmeFilename": "README.md",
+	"author": "Olivier Bagot (http://github.com/hobbe)",
+	"scripts": {
+		"start": "node server.js",
+		"test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+	},
+	"dependencies": {
+		"express": "*"
+	},
+	"keywords": [
+		"Node.js",
+		"Express",
+		"http",
+		"server",
+		"web server"
+	],
+	"contributors": [
+		"Olivier Bagot (http://github.com/hobbe)"
+	],
+	"license": {
+		"type": "MIT",
+		"url": "http://opensource.org/licenses/MIT"
+	}
+}
