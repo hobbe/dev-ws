@@ -4,6 +4,7 @@
 	"description": "Development Web Server",
 	"main": "server.js",
 	"readmeFilename": "README.md",
+	"homepage": "http://github.com/hobbe/dev-ws",
 	"author": "Olivier Bagot (http://github.com/hobbe)",
 	"scripts": {
 		"start": "node server.js",
@@ -13,8 +14,8 @@
 		"express": "*"
 	},
 	"keywords": [
-		"Node.js",
-		"Express",
+		"node.js",
+		"express",
 		"http",
 		"server",
 		"web server"
@@ -22,8 +23,15 @@
 	"contributors": [
 		"Olivier Bagot (http://github.com/hobbe)"
 	],
+	"bugs": {
+		"url": "http://github.com/hobbe/dev-ws/issues"
+	},
 	"license": {
 		"type": "MIT",
-		"url": "http://opensource.org/licenses/MIT"
+		"url": "http://github.com/hobbe/dev-ws/raw/master/LICENSE"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hobbe/dev-ws.git"
 	}
 }

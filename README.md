@@ -8,14 +8,17 @@ Simple web server for development purpose.
 
 1. Install [Node.js](http://nodejs.org/).
 
-2. Make sure Express is installed:
+2. Download [this project as zip](https://github.com/hobbe/dev-ws/archive/master.zip)
+and unzip to your prefered location.
 
-		npm install express
+3. In the project folder, install package and dependencies:
 
-3. Copy your web site pages to `/public` folder.
+		npm install
 
-4. Run:
+4. Copy your web site pages to `/public` folder.
 
-		node server.js
+5. Run:
 
-5. Visit [http://localhost:8008](http://localhost:8008/) on your Web browser.
+		npm start
+
+6. Visit [http://localhost:8008](http://localhost:8008/) on your Web browser.
