@@ -30,15 +30,20 @@
 var express = require('express');
 var app = express();
 
+var config = require('./config.json');
+
 app.configure(function() {
 
 	// Logger
 	app.use(express.logger());
 
-	// Serve '/' from 'public' folder
-	app.use('/', express.static(__dirname + '/public'));
+	// Serve '/' from config.server.folder
+	app.use('/', express.static(__dirname + '/' + config.server.location));
 });
 
-console.log('Development Web Server');
+console.log('** Development Web Server **');
+console.log('Serving files from /' + config.server.location);
+console.log('Started on http://localhost:' + config.server.port);
+
 // Start listening on port
-app.listen(8008);
+app.listen(config.server.port);
