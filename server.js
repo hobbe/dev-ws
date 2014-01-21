@@ -32,18 +32,27 @@ var app = express();
 
 var config = require('./config.json');
 
+console.log('** Development Web Server **');
+
 app.configure(function() {
 
 	// Logger
 	app.use(express.logger());
 
-	// Serve '/' from config.server.folder
-	app.use('/', express.static(__dirname + '/' + config.server.location));
+	var fs = require('fs');
+	fs.exists(config.server.location, function(exists) {
+		if (exists) {
+			// Serve '/' from config.server.folder
+			app.use('/', express.static(config.server.location));
+			console.log('Serving files from folder ' + config.server.location);
+		} else {
+			// Serve '/' from local sub-folder named from config.server.folder
+			app.use('/', express.static(__dirname + '/' + config.server.location));
+			console.log('Serving files from ' + __dirname + '/' + config.server.location);
+		}
+	});
 });
 
-console.log('** Development Web Server **');
-console.log('Serving files from /' + config.server.location);
-console.log('Started on http://localhost:' + config.server.port);
-
 // Start listening on port
+console.log('Started on http://localhost:' + config.server.port);
 app.listen(config.server.port);
